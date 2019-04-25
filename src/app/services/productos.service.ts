@@ -9,6 +9,7 @@ export class ProductosService {
   cargando = true;
   productos: ProductosI[] = [];
   productosFiltrado: ProductosI[] = [];
+  termino: '';
   constructor( private http: HttpClient) {
     this.cargarProductos();
    }
@@ -51,7 +52,6 @@ export class ProductosService {
   }
 
   private filtrarProductos( termino: string) {
-    console.log(this.productos);
     this.productosFiltrado = [];
     termino = termino.toLocaleLowerCase();
     this.productos.forEach( prod => {
