@@ -1427,12 +1427,17 @@ body {
 .item-inside-1 {
     /* background-image: url("../img/project-1.jpg"); */
     background-position: 50% 100%;
-    background-size: 350%;
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media (min-width: 40em) {
     .item-inside-1 {
         background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: center;
+        /*  */
     }
 }
 
