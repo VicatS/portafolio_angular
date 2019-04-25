@@ -8,7 +8,7 @@ import { EquipoPagina } from '../interfaces/equipo-pagina.interface';
 })
 export class InfoPaginaService {
   info: InfoPagina = {};
-  equipo: EquipoPagina = {};
+  equipo: EquipoPagina[];
   cargada = false;
 
   constructor(private http: HttpClient) {
@@ -28,7 +28,7 @@ export class InfoPaginaService {
 
   private cargarEquipo() {
     this.http.get('https://angular-html-basico.firebaseio.com/equipo.json')
-    .subscribe((response: EquipoPagina) => {
+    .subscribe((response: EquipoPagina[]) => {
       this.equipo = response;
       console.log(response);
     });
