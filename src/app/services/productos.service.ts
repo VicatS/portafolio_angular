@@ -33,6 +33,7 @@ export class ProductosService {
   }
 
   getProducto( id: string) {
+    this.cargando = false;
     return this.http.get(
       `https://angular-html-basico.firebaseio.com/productos/${ id }.json`
     );
